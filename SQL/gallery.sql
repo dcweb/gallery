@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50623
 File Encoding         : 65001
 
-Date: 2016-06-29 16:10:51
+Date: 2016-06-29 16:11:41
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -26,10 +26,8 @@ CREATE TABLE `gallery` (
   `created_at` timestamp NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` timestamp NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of gallery
 -- ----------------------------
-INSERT INTO `gallery` VALUES ('1', 'testss', 'http://dcms.groupdc.be/userfiles/Image/', 'admin', '2016-06-29 13:56:15', '2016-06-29 14:05:14');
-INSERT INTO `gallery` VALUES ('2', 'abc', 'http://dcms.groupdc.be/userfiles/Image/grondtest/', 'admin', '2016-06-29 13:56:59', '2016-06-29 14:05:04');
