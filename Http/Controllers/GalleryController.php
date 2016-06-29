@@ -38,6 +38,7 @@ class GalleryController extends Controller {
 		return Datatable::query(DB::connection('project')
 																		->table('gallery')
 																		->select('id','name','path')
+																		->orderBy('name')
 																		)
 
 																	->showColumns('name','path')
@@ -45,7 +46,7 @@ class GalleryController extends Controller {
 																			<a class="btn btn-xs btn-default" href="/admin/gallery/'.$model->id.'/edit"><i class="fa fa-pencil"></i></a>
 																			<button class="btn btn-xs btn-default" type="submit" value="Delete this article" onclick="if(!confirm(\'Are you sure to delete this item?\')){return false;};"><i class="fa fa-trash-o"></i></button>
 																		</form>';})
-																	->searchColumns('node.title')
+																	->searchColumns('name','path')
 																	->make();
 	}
 
